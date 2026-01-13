@@ -1,0 +1,47 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+@import "styles/mixins/responsive";
+@import "styles/mixins/visual";
+
+
+.sectionHeader{
+    @include flex-center;
+    flex-direction: column;
+    margin-bottom: 100px;
+    text-align: center;
+    
+    @include response('md'){
+        @include responsive-margin-bottom;
+    }
+
+    &-createTour{
+        @include response('md'){
+            margin-bottom:40px;
+        }
+    }
+    
+    &__title{
+        font-size: 59px;
+        line-height: 73.16px;
+
+        @include response('md'){
+            width: 100%;
+            font-size: 34px;
+            line-height: 38px;
+            letter-spacing: 0.02em;
+        }
+    }
+
+    &__description{
+        width: 418px;
+        margin: 33px auto 0px auto;
+        line-height: 27.4px;
+        color:$grey-300;
+
+        @include response('md'){
+            max-width: 100%;
+            margin-top: 20px;
+            line-height: 23px;
+        }
+    }
+}

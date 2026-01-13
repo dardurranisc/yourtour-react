@@ -1,0 +1,37 @@
+@import "styles/breakpoints";
+
+.container{
+  max-width:1170px;
+  margin:0 auto;
+
+  @include response('xl'){
+    max-width:920px;
+  }
+
+  @include response('lg'){
+    max-width: 100%;
+    padding: 0px 53px;
+  }
+
+  @include response('md'){
+    padding:0px 21px;
+  }
+
+  &-header{
+    @include response('lg'){
+      padding: 0px 57px;
+    }
+
+    @include response('md'){
+      padding: 0px 20px;
+    }
+  }
+
+  &-travelGallery{
+    max-width:1980px;
+
+    @include response ('lg'){
+      padding: 0;
+    }
+  }
+}

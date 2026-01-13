@@ -1,0 +1,26 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.section{
+  padding-top:135px;
+  color:$color-base;
+  background:$beige-100;
+
+  @include response('md'){
+    padding-top:75px;
+  }
+
+  &-hero{
+    height: 100vh;
+    min-height: 831px;
+    color: $white;
+  }
+
+  &-travelWithUs{
+    padding-bottom:135px;
+
+    @include response('md'){
+      padding-bottom:75px;
+    }
+  }
+}

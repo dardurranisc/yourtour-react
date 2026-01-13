@@ -1,0 +1,79 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+@import "styles/mixins/responsive";
+@import "styles/mixins/visual";
+
+.travelling{
+    &__block{
+        @include flex-center;
+        gap: 27px;
+        max-width: 771px;
+        margin: 0 auto;
+        
+        @include response('md'){
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+    }
+
+    &__image{
+        max-width: 370px;
+        width: 100%;
+        max-height: 370px;
+        @include radius-default;
+
+        @include response('md'){
+            width: 130px;
+            height: 133px;
+            @include responsive-radius;
+        }
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+
+        @include response('md'){
+            align-items: center;
+        }
+    }
+
+    &__name{
+        font-size:35px;
+        line-height: 42.7px;
+
+        @include response('md'){
+            max-width: 291px;
+            line-height: 27px;
+            letter-spacing: 1px;
+            font-size: 23px;
+        }
+    }
+
+    &__text{
+        line-height: 28.4px;
+        color:$grey-300;
+
+        @include response('md'){
+            padding: 5px;
+            line-height: 22px;
+        }
+    }
+
+    &__email{
+        position: relative;
+        color:$color-base;
+
+        &::after{
+            @include underline;
+            bottom: 2px;
+            @include underline-transition;
+        }
+
+        &:hover::after{
+            @include opacity-hover;
+        }
+    }
+}

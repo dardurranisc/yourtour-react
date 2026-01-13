@@ -1,0 +1,114 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+@import "styles/mixins/responsive";
+@import "styles/mixins/visual";
+
+.button{
+    @include underline-transition;
+    border-radius: 10px;
+
+    &--main{
+        padding: 5px 20px;
+        font-size:17px;
+        letter-spacing: -0.01em;
+        line-height: 24px;
+        color:$color-base;
+        background-color:$white;
+
+        &:hover{
+            color:$white;
+            background:$orange-200;
+        }
+
+        &:active{
+            color: $color-base;
+            background: $orange-100;
+        }
+    }
+
+    &--secondary{
+        z-index: 2;
+        @include flex-center;
+        width:199px;
+        margin: -7px -20px;
+        padding: 7px 20px;
+        @include font-size-default;
+        font-weight: 700;
+        line-height: 28px;
+        color:$white;
+        background-color:transparent; 
+        @include radius-default;
+
+        &:hover {
+            color: $white;
+            background: $green-400;
+        }
+
+        &:active {
+            color: $white;
+            background: $orange-200;
+        } 
+
+        @include response('md'){
+            @include responsive-size;
+            width:160px;
+        }
+    }
+
+    &--tertiary{
+        display: block;
+        min-width: 235px;
+        padding: 15px 70px;
+        font-size: 20px;
+        line-height: 28px;
+        color:$white;
+        background: $green-400;
+
+        @include response('md'){
+            min-width: 0%;
+            padding: 12px 30px;
+            font-size: 16px;
+        }
+
+        @include response('xss'){
+            padding: 12px 19px;
+        }
+
+        &:hover{
+            background:$green-300;
+        }
+
+        &:active{
+            background:$green-200;
+        }
+
+    }
+
+    &--reset{
+        display: block;
+        min-width: 235px;
+        padding: 15px 70px;
+        font-size: 20px;
+        line-height: 28px;
+        color: $green-400;
+        background:$green-100;
+
+        @include response('md'){
+            min-width: 0%;
+            padding: 12px 30px;
+            font-size: 16px;
+        }
+
+        @include response('xss'){
+            padding: 12px 19px;
+        }
+
+        &:hover{
+            color: $green-400;
+            background: $grey-100;
+        }
+        &:active{
+            background: $grey-200;
+        }
+    }
+}

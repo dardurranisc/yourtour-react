@@ -1,0 +1,107 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+@import "styles/mixins/responsive";
+@import "styles/mixins/visual";
+
+.choice {
+
+  &__main{
+    @include flex-center;
+    flex-direction: column;
+    margin-bottom:100px;
+
+    @include response('md'){
+      @include responsive-margin-bottom;
+    }
+  }
+
+  &__lists{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top:35px;
+
+    @include response('md'){
+      flex-wrap: wrap;
+    	max-width: 281px;
+      gap:10px;
+	    margin-top:27px;
+    }
+
+    @include response('sm'){
+      margin-top: 31px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    @include font-size-default;
+    font-weight:700;
+    line-height: 28.06px;
+
+    @include response('md'){
+      @include responsive-size;
+    }
+
+    @include response('sm'){
+      line-height: 22px;
+    }
+
+    &::after {
+      @include underline;
+      bottom: -7px;
+      height: 2px;
+      @include underline-transition;
+    }
+
+    &:hover {
+      &::after {
+        @include opacity-hover;
+      }
+    }
+
+    &--active {
+      color: $orange-200;
+      
+      &::after {
+        background-color: $orange-200; 
+        @include opacity-hover;
+      }
+      
+      &:hover {
+        color: $orange-200;
+        
+        &::after {
+          @include opacity-hover;
+        }
+      }
+    }
+  }
+
+  &__articles{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    color:$white;
+
+    @include response('xl'){
+      justify-content: flex-start;
+      gap: 20px;
+    }
+
+    @include response('lg'){
+      justify-content: center;
+      gap: 18px;
+    }
+
+    @include response('md'){
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include response('sm'){
+      gap: 18px;
+    }
+  }
+
+}

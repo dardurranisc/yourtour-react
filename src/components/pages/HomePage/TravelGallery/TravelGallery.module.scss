@@ -1,0 +1,50 @@
+@import "styles/breakpoints";
+@import "styles/mixins/responsive";
+
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 30px;
+
+    @include response('xl') {
+        padding: 0 20px;
+    }
+
+    @include response('lg'){
+        [data-block="1"][data-item-index="2"],
+        [data-block="2"][data-item-index="3"],
+        [data-block="3"][data-item-index="4"] {
+            display: none;
+        }
+    }
+
+    @include response('md') {
+        gap: 18px;
+        align-items: center;
+
+        [data-block="2"]{
+            max-width: 100%;
+            max-height: 110px;
+        }
+    }
+
+    @include response('sm') {
+        padding: 0 19px;
+
+        [data-block="2"]{
+           gap:10px;
+        }
+    }
+
+    @include response('none'){
+        [data-block="1"][data-item-index="3"],
+        [data-block="3"][data-item-index="3"],
+        [data-block="2"][data-item-index="2"] {
+            display:none;
+	    }
+    }
+    
+}
+

@@ -1,0 +1,14 @@
+@import "styles/breakpoints";
+
+
+.story{
+    &__blocks{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @include response('md'){
+            gap: 20px;
+        }   
+    }
+}

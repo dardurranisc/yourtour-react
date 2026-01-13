@@ -1,0 +1,36 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+@import "styles/mixins/responsive";
+
+.inputField{
+    width:100%;
+
+    &__input{
+        width: 100%;
+        height: 68px;
+        margin-top: 12px;
+        padding: 20px;
+        font-size: 20px;
+        color: $grey-300;
+        background: $beige-100;
+        border: 1px solid $beige-200;
+        border-radius: 10px;
+
+        @include response('md'){
+            height: 43px;
+            padding: 10px;
+            @include responsive-size;
+        }
+
+        &:hover,
+        &:focus{
+            background: $beige-200;
+        }
+
+        &:focus{
+            color:$color-base;
+            outline-color:$grey-300;
+        }
+    }
+
+}

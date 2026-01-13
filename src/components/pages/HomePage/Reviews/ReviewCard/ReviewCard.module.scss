@@ -1,0 +1,88 @@
+@import "styles/breakpoints";
+@import "styles/variables";
+@import "styles/mixins/visual";
+@import "styles/mixins/responsive";
+
+
+
+.reviewCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex:1;
+    gap: 70px;
+    padding: 40px;
+    background:$beige-200;
+    @include radius-default;
+    
+    @include response('md'){
+        gap: 40px;
+        width: 100%;
+        padding: 20px;
+        @include responsive-radius;
+    }
+
+    &__text{
+        line-height:28.3px;
+        @include p-big;
+        font-size: 23px;
+
+        @include response('xl'){
+            line-height: 28px;
+        }
+
+        @include response('md'){
+            margin:0px;
+		    line-height: 23px;
+            @include responsive-size;
+        }
+    }
+
+    &__author{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__name{
+        line-height: 42.7px;
+        font-size: 35px;
+        @include p-big;
+
+        @include response('md'){
+            letter-spacing: 0.04em;
+            font-size:23px;
+            font-weight: 500;
+        }
+    }
+
+    &__options{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap:12px;
+
+        @include response('md'){
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+    }
+
+    &__span{
+        text-align: left;
+        letter-spacing: -0.01em;
+        color: $grey-300;
+        font-size: 17px;
+
+        @include response('md'){
+            @include responsive-size;
+        }
+    }
+
+    &__image{
+        max-width: 75px;
+        max-height: 75px;
+        @include radius-default;
+    }
+}

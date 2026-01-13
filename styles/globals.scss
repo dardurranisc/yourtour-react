@@ -1,0 +1,108 @@
+@import "variables";
+@import "breakpoints";
+@import "mixins/responsive";
+@import "mixins/visual";
+
+*{
+  box-sizing:border-box;
+  word-wrap: break-word;
+}
+
+*,
+*::after,
+*::before{
+	box-direction:none;
+  text-decoration:none;
+	color:inherit;
+}
+
+body{
+  margin:0px;
+  font-size:20px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+
+  @include response('md'){
+    @include responsive-size;
+  }
+}
+
+p{
+  margin:0;
+}
+
+textarea,input{
+  font-size:20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+ul{
+  margin:0px;
+  padding:0px;
+	list-style:none;
+}
+
+h1,h2{
+  margin:0;
+	font-weight:700;
+}
+
+h2{
+  text-align:center;
+  line-height: 73.16px;
+  font-size:59px;
+
+  @include response('md'){
+    letter-spacing: 0.02em;
+  }
+}
+
+h3{
+  margin:0;
+  font-weight:500;
+
+  @include response('md'){
+    font-weight: 700;
+  }
+}
+
+p{
+  @include response('md'){
+    @include responsive-size;
+  }
+}
+
+button {
+  padding: 0;
+  border: none;
+  font:inherit;
+  background-color: transparent;
+  @include cursor;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  background: transparent;
+  color: transparent;
+}
+
+input[type="date"]{
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.arrowMore{
+  margin-left: 15px;
+  max-width: 22px;
+  max-height: 15px;
+}
+
+
+

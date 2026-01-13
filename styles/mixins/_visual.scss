@@ -1,0 +1,60 @@
+@import "../variables";
+
+@mixin flex-center{
+  display:flex;
+  align-items:center;
+}
+
+@mixin radius-default {
+  border-radius:50px;
+}
+
+@mixin max-height-width {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@mixin font-size-default{
+  font-size:23px;
+}
+
+@mixin underline{
+  position: absolute;
+  z-index: 2;
+  bottom:-3px;
+  left: 0;
+  right: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color:$color-base;
+  opacity: 0;
+}
+
+@mixin opacity-hover{
+  opacity:1;
+}
+
+@mixin underline-transition{
+  transition:all 200ms ease;
+}
+
+@mixin card-transition{
+  transition: all 300ms ease;
+}
+
+@mixin cursor {
+  cursor: pointer;
+}
+
+@mixin p-big{
+  font-weight: 700;
+}
+
+@mixin p-small{
+  text-align: left;
+  letter-spacing: -0.01em;
+  color:$grey-300;
+  font-size: 17px;
+}
+

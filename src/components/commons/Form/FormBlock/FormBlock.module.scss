@@ -1,0 +1,37 @@
+@import "styles/breakpoints";
+
+.formBlock{
+    display: flex;
+    gap:30px;
+    
+    @include response('lg'){
+        gap:20px;
+    }
+
+    &.horizontal {
+        flex-direction: row;
+
+        @include response('md'){
+            flex-direction: column;
+            gap: 30px;
+        }
+
+
+    }
+    
+    &.vertical {
+        flex-direction: column;
+        gap:9px;
+
+        @include response('md'){
+            gap:9.5px;
+        }
+    }
+      
+    &.row{
+        @include response('md'){
+            gap: 10px;
+            flex-direction:row !important;
+        }
+    }    
+}

@@ -1,0 +1,135 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+@import "styles/mixins/visual";
+
+
+.header{
+  position: absolute;
+  z-index:5;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color:$white;
+    
+    &__inner{
+        padding: 28px 0px;
+
+        @include response('md'){
+            padding: 33px 0px;
+        }
+    }
+    
+    &.scrolled{
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        width: 100%;
+        color: $color-base;
+        background-color: rgba(243, 239, 232, 0.6);
+        backdrop-filter: blur(25px);
+
+        .menu__list {
+            &::after {
+                background-color: $color-base;
+            }
+            
+                &:hover::after {
+                    background-color: $color-base;
+                    opacity: 1;
+                }
+            }
+        
+            .menu__link {
+                color: $color-base;
+            }
+        }
+
+    &__logo{
+        @include response('md'){
+            max-width: 133px;
+            height:100%;
+        }
+
+        &Inverted{
+            filter:invert(1);
+        }
+    }
+
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__inner-fixed{
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        width: 100%;
+        color: $color-base;
+        background-color: rgba(243, 239, 232, 0.6);
+        backdrop-filter: blur(25px);
+
+        .menu__item:after{
+            background-color:$color-base;
+        }
+    }
+
+    &__logo-fixed{
+        filter: invert(1);
+    }
+
+    &_position{
+        position:fixed;
+        left: 0;
+        right: 0;
+    }
+}
+
+.menu,
+.contacts{
+    @include flex-center;
+}
+
+.menu{
+    @include response('none'){
+        display:none;
+    }
+
+    &__lists{
+        display: flex;
+        gap:50px;
+
+        @include response('xl'){
+            gap:0px 30px;
+        }
+    }
+
+
+    &__list {
+        position: relative;
+    
+        &:after {
+            @include underline;
+            @include underline-transition;
+        }
+    
+        &:hover:after {
+            background-color:$white;
+            @include opacity-hover;
+        }
+    }
+}
+
+.contacts{
+    @include response('xsss'){
+        display: none;
+    }
+}
+
+
+.menu__item,
+.story__links a,
+.travelling__email{
+    position: relative;
+}
+

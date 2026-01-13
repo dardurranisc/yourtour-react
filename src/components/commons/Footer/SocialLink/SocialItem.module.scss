@@ -1,0 +1,45 @@
+@import 'styles/breakpoints';
+@import "styles/mixins/visual";
+
+.socialItem{
+    @include response('md'){
+        align-items: center;
+    }
+
+    @include response('xsss'){
+        gap: 5px;
+    }
+
+    &__link {
+        display: flex;
+        gap: 10px;
+
+        @include response('xl'){
+            @include flex-center;
+            gap: 10px;
+        }
+
+         @include response('xs'){
+            gap:7px;
+        }
+
+        &:hover .socialItem__title::after{
+            @include opacity-hover;
+        }
+    }
+
+    &__image{
+        position: relative;
+    }
+
+    &__title{
+        position: relative;
+        
+        &::after{
+            @include underline;
+            bottom: -3px;
+            @include underline-transition;
+        }
+    }
+
+}

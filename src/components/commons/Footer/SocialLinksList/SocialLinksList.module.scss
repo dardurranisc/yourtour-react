@@ -1,0 +1,21 @@
+@import 'styles/breakpoints';
+
+.socialLinksList{
+    display: flex;
+    gap: 25px;
+
+    @include response('md'){
+        display: flex;
+        justify-content:center;
+        gap: 15px;
+    }
+
+    @include response('xs'){
+        gap: 10px;
+    }
+
+    @include response('xss'){
+        flex-direction:column;
+      	margin-top:7px;
+    }
+}

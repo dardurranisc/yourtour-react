@@ -1,0 +1,32 @@
+@import 'styles/breakpoints';
+@import 'styles/mixins/visual';
+
+
+.footer{
+  padding: 30px 0px;
+  background: $beige-200;
+
+  @include response('md'){
+    padding: 21px 0px;
+  }
+
+  &__content{
+    @include flex-center;
+    justify-content: space-between;
+
+    @include response('md'){
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__text{
+    margin:0px;
+    color: #A6A6A6;
+    
+    @include response('md'){
+      display: flex;
+		  justify-content:center;
+    }
+  }
+}

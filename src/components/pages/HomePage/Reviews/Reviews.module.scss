@@ -1,0 +1,16 @@
+@import "styles/breakpoints";
+
+.reviews__blocks{
+  display: flex;
+  gap: 30px;
+  
+  @include response('xl'){
+    gap: 18px;
+  }
+
+  @include response('md'){
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
