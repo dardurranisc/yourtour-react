@@ -1,6 +1,8 @@
 const path = require('path');
 
 module.exports = {
+  turbopack: {},
+   
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
