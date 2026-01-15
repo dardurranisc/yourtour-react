@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"],
+			"@styles/*": ["src/styles/*"],
+			"@components/*": ["src/components/*"],
+			"@commons/*": ["src/components/commons/*"]
+		},
+		"target": "ES2017",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": false,
+		"noEmit": true,
+		"incremental": true,
+		"module": "esnext",
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "react-jsx"
+	},
+	"exclude": ["node_modules", ".next"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.mts",
+		"**/*.ts",
+		"**/*.tsx",
+		"src/components/pages/HomePage/Reviews/constans/ReviewsData.tsx"
+	]
+}

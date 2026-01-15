@@ -1,25 +1,31 @@
 {
-  "name": "yourtour",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.0.7",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "sass": "^1.94.2"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.7",
-    "typescript": "^5"
-  }
+	"name": "yourtour",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "biome lint .",
+		"format": "biome format . --write",
+		"check": "biome check .",
+		"format:fix": "biome check --write .",
+		"lint:fix": "biome lint --write .",
+		"ci:check": "biome ci .",
+		"clean": "biome clean",
+		"fix:unsafe": "biome check --write --unsafe ."
+	},
+	"dependencies": {
+		"next": "16.0.7",
+		"react": "19.2.0",
+		"react-dom": "19.2.0",
+		"sass": "^1.94.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.11",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"typescript": "^5"
+	}
 }

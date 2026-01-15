@@ -11,8 +11,10 @@
   }
 
   &-hero{
+    position: relative;
     height: 100vh;
     min-height: 831px;
+    padding-top:0px;
     color: $white;
   }
 

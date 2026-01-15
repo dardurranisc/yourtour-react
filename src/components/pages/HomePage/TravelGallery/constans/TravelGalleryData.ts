@@ -1,0 +1,93 @@
+export type GalleryImage = {
+	id: number;
+	src: string;
+	alt: string;
+	size: "normal" | "small";
+};
+
+export const galleryData: GalleryImage[][] = [
+	[
+		{
+			id: 1,
+			src: "images/traveling/travel_photo-1.jpg",
+			alt: "Самолет",
+			size: "normal",
+		},
+		{
+			id: 2,
+			src: "images/traveling/travel_photo-2.jpg",
+			alt: "Палатка",
+			size: "normal",
+		},
+		{
+			id: 3,
+			src: "images/traveling/travel_photo-3.jpg",
+			alt: "Горы",
+			size: "normal",
+		},
+		{
+			id: 4,
+			src: "images/traveling/travel_photo-4.jpg",
+			alt: "Дорога",
+			size: "normal",
+		},
+	],
+	[
+		{
+			id: 5,
+			src: "images/traveling/travel_photo-5.jpg",
+			alt: "Дорога",
+			size: "small",
+		},
+		{
+			id: 6,
+			src: "images/traveling/travel_photo-6.jpg",
+			alt: "Дорога",
+			size: "small",
+		},
+		{
+			id: 7,
+			src: "images/traveling/travel_photo-7.jpg",
+			alt: "Дорога",
+			size: "small",
+		},
+		{
+			id: 8,
+			src: "images/traveling/travel_photo-8.jpg",
+			alt: "Дорога",
+			size: "small",
+		},
+		{
+			id: 9,
+			src: "images/traveling/travel_photo-9.jpg",
+			alt: "Дорога",
+			size: "small",
+		},
+	],
+	[
+		{
+			id: 10,
+			src: "images/traveling/travel_photo-10.jpg",
+			alt: "Дорога",
+			size: "normal",
+		},
+		{
+			id: 11,
+			src: "images/traveling/travel_photo-11.jpg",
+			alt: "Дорога",
+			size: "normal",
+		},
+		{
+			id: 12,
+			src: "images/traveling/travel_photo-12.jpg",
+			alt: "Дорога",
+			size: "normal",
+		},
+		{
+			id: 13,
+			src: "images/traveling/travel_photo-13.jpg",
+			alt: "Дорога",
+			size: "normal",
+		},
+	],
+];
